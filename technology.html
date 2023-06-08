@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="technology" >
+
+  <header class="primary-header flex ">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="" class="logo">
+    </div>
+  
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false"> Menu</span></button>
+
+    <nav>
+      <ul class="primary-navigation underline-indicators flex" data-visible = "false">
+          <li><a class="ff-sans-cond uppercase, text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+          <li><a class="ff-sans-cond uppercase, text-white letter-spacing-2"href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
+          <li><a class="ff-sans-cond uppercase, text-white letter-spacing-2" href="Crew.html"><span aria-hidden="true">03</span>Crew</a></li>
+          <li><a class="ff-sans-cond uppercase, text-white letter-spacing-2" href="Technology.html"><span aria-hidden="true">04</span>Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flow grid grid-container--tech grid-container--technology">
+    <h1 class="numbered-title"><span aria-hidden="true">03</span>Space launch 101</h1>
+    <div class="numberedTitle-indicators flex" role="tablist" aria-label="Technologies">
+      <button aria-selected="true" tabindex="0" aria-controls="launchvehicle-tab" role="tab" data-image="launchvehicle-image"><span class="sr-only" >numbered Title</span>1</button>
+      <button aria-selected="false" tabindex="-1" aria-controls="capsule-tab" role="tab" data-image="capsule-image"><span class="sr-only" >numbered Title</span>2</button>
+      <button aria-selected="false" tabindex="-1" aria-controls="spaceport-tab" data-image="spaceport-image" role="tab"><span class="sr-only">numbered Title</span>3</button>
+    </div>
+
+    <!-- launch vehicle -->
+   <article role="tabpanel" tabindex="0" id="launchvehicle-tab">
+    <h1 class="letter-spacing-2 ff-sans-cond fs-200 uppercase text-light">The terminology...</h1>
+    <h2 class="uppercase fs-700 ff-serif text-white">Launch vehicle</h2>
+
+    
+    <p class="text-light fs-200">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+      payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+      WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+      it's quite an awe-inspiring sight on the launch pad!</p>
+   </article>
+   
+   <!-- Capsule -->
+   <article hidden role="tabpanel" tabindex="0" id="capsule-tab">
+    <h1 class="letter-spacing-2 ff-sans-cond fs-200 uppercase text-light">The terminology...</h1>
+    <h2 class="uppercase fs-700 ff-serif text-white"> Space capsule</h2>
+
+    
+    <p class="text-light fs-200">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+      capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+      you'll spend your time during the flight. It includes a space gym, cinema, 
+      and plenty of other activities to keep you entertained.</p>
+   </article>
+
+   <!-- Spaceport -->
+   <article hidden role="tabpanel" tabindex="0" id="spaceport-tab">
+    <h1 class="letter-spacing-2 ff-sans-cond fs-200 uppercase text-light">The terminology...</h1>
+    <h2 class="uppercase fs-700 ff-serif text-white">spaceport</h2>
+
+    
+    <p class="text-light fs-200">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+      by analogy to the seaport for ships or airport for aircraft. Based in the 
+      famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+      of the Earth’s rotation for launch.</p>
+   </article>
+
+    <picture id="launchvehicle-image">
+      <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="Launch Vehicle" class="image1">
+      <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="Launch Vehicle" class="image2">
+    </picture>
+
+    <picture hidden id="capsule-image">
+      <img src="assets/technology/image-space-capsule-landscape.jpg" alt="space capsule" class="image1">
+      <img src="assets/technology/image-space-capsule-portrait.jpg" alt="capsule" class="image2">
+    </picture>
+
+    <picture hidden id="spaceport-image">
+      <img src="assets/technology/image-spaceport-landscape.jpg" alt="space" class="image1">
+      <img src="assets/technology/image-spaceport-portrait.jpg" alt="Launch Vehicle" class="image2">
+    </picture>
+
+    
+  </main>
+</body>
+</html>
